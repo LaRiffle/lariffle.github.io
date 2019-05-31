@@ -33,9 +33,26 @@
           top: -50px;
           left: 30px;
           position: absolute;
+          font-weight: 300;
       }
-      .logos {
-          float: right;
+      .blog-link, .blog-link:hover {
+          color: inherit;
+          text-decoration: inherit;
+      }
+      .navbar {
+          float:right;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          text-align: right;
+      }
+      .navbar a {
+          color: white;
+      }
+      .blog-title {
+          font-size: 2rem;
+          font-weight: 300;
+          margin-bottom: 0px;
       }
 
       @media(max-width:990px){
@@ -46,6 +63,9 @@
               padding: 3px;
               top: 25px;
               left: 25px;
+          }
+          .blog-title {
+            font-size: 1.65rem;
           }
       }
       @media(max-width:767px){
@@ -58,8 +78,8 @@
               left: inherit;
               right: 30px;
           }
-          #logo_inria {
-              display: none;
+          .blog-title {
+            font-size: 1.5rem;
           }
       }
       @media(max-width:450px){
@@ -73,105 +93,99 @@
 
     <div class="container">
         <div class="card" style="margin-top: 10px">
+            <div class="navbar">
+                  <a href="https://www.di.ens.fr/~ryffel/" class="card-link">About</a>
+                  <a href="https://twitter.com/theoryffel" class="card-link">Twitter</a>
+                  <a href="https://github.com/LaRiffle" class="card-link">Github</a>
+                  <a href="https://www.linkedin.com/in/theo-ryffel/" class="card-link">Linkedin</a>
+                  <a href="https://scholar.google.fr/citations?user=JbSRqs8AAAAJ&hl=fr&oi=ao" class="card-link">Google scholar</a>
+                  <a tabindex="0" class="card-link" role="button" data-toggle="popover" data-trigger="focus" data-content="theo.ryffel[at]ens.fr">Contact</a>
+
+              </div>
             <img class="card-img-top" src="https://pbs.twimg.com/profile_banners/430671736/1523100759/1500x500" alt="The presentation cover couldn't load. :/">
 
             <div class="profile-picture"><img src="https://pbs.twimg.com/profile_images/1101407769872252928/VcGgposB_400x400.png" alt="Profile picture" /></div>
           <div class="card-body" style="position: relative;">
               <h3 class="profile-title">Théo Ryffel</h3>
 
-
-
-              <h4 class="card-title">Hey, welcome!</h4>
-              <hr />
-            <h5 class="card-title">I'm a PhD student at ENS at the crossroads of Machine Learning and Cryptology</h5>
-            <p class="card-text">
-                I'm interested in Privacy-Preserving Machine Learning and have started a PhD at
-                <a href="https://www.ens.fr/">ENS</a> to work on this topic under the supervision of
-                <a href="https://www.di.ens.fr/david.pointcheval/index.php">David Pointcheval</a> and
-                <a href="https://www.di.ens.fr/~fbach/">Francis Bach</a>. I'm also a core contributor of the
-                <a href="https://openmined.org">OpenMined</a> project that builds practical tools for private AI, and a co-founder
-                of <a href="https//arkhn.org">Arkhn</a> which builds concrete solutions for hospitals. I publish regularly here
-                about my work and readings.
-            </p>
-
-              <a href="https://twitter.com/theoryffel" class="card-link">Twitter</a>
-              <a href="https://github.com/LaRiffle" class="card-link">Github</a>
-              <a href="https://www.linkedin.com/in/theo-ryffel/" class="card-link">Linkedin</a>
-              <a href="https://scholar.google.fr/citations?user=JbSRqs8AAAAJ&hl=fr&oi=ao" class="card-link">Google scholar</a>
-              <a tabindex="0" class="card-link" role="button" data-toggle="popover" data-trigger="focus" data-content="theo.ryffel[at]ens.fr">Contact</a>
+              <h4 class="card-title blog-title">At the crossroads of Machine Learning and Cryptography</h4>
           </div>
         </div>
         <hr />
+        <a href="https://blog.openmined.org/encrypted-deep-learning-classification-with-pysyft/" class="blog-link">
         <div class="card-deck" style="margin-bottom: 10px;">
           <div class="card">
             <div class="card-body">
                 <div class="media">
-                  <img class="mr-3" src="home_src/logos/om.jpeg" alt="Generic placeholder image" width="30px" style="position:relative; bottom: 3px;">
+                  <img class="mr-3" src="home_src/logos/om.jpeg" alt="Generic placeholder image" width="50px" style="position:relative; bottom: 3px;">
                   <div class="media-body">
                     <h5 class="card-title">Encrypted Deep Learning Classification with PyTorch & PySyft</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">by Théo Ryffel on April 16th, 2019 </h6>
                     <p>
-                        <span class="badge badge-secondary">Deep Learning</span>
-                        <span class="badge badge-secondary">Private AI</span>
-                        <span class="badge badge-secondary">Secure Multi-Party Computation</span>
-                        <span class="badge badge-secondary">Encrypted Computation</span>
+                        <span class="badge badge-info">Deep Learning</span>
+                        <span class="badge badge-info">Private AI</span>
+                        <span class="badge badge-info">Secure Multi-Party Computation</span>
+                        <span class="badge badge-info">Encrypted Computation</span>
                     </p>
-                      <h6 class="card-subtitle mb-2 text-muted">Posted on Aprils 16th, 2019 </h6>
+
                   </div>
                 </div>
 
-              <p class="card-text">Great theories need great implementations. We show in this blog how to use a private neural
-                  network to classify MNIST images using Secure Multi-Party Computation (SMPC). We achieve classification in
-                  <33ms with >98% accuracy over local (virtualized) computation.</p>
+              <p class="card-text">We use the PySyft library to encrypt a neural
+                  network and privately classify MNIST images using Secure Multi-Party Computation (SMPC).
+                  We achieve classification in <33ms with >98% accuracy over local (virtualized) computation.</p>
                 <img src="https://blog.openmined.org/content/images/2019/04/mpc7.gif" alt="" width="60%" />
-                <p class="">
-                  <a href="https://blog.openmined.org/encrypted-deep-learning-classification-with-pysyft/" class="btn btn-primary">Read more on blog.openmined.org</a>
-              </p>
-
             </div>
           </div>
         </div>
+        </a>
+        <hr />
+        <a href="https://blog.openmined.org/upgrade-to-federated-learning-in-10-lines/" class="blog-link">
         <div class="card-deck" style="margin-bottom: 10px;">
           <div class="card">
             <div class="card-body">
                 <div class="media">
-                  <img class="mr-3" src="home_src/logos/om.jpeg" alt="Generic placeholder image" width="30px" style="position:relative; bottom: 3px;">
+                  <img class="mr-3" src="home_src/logos/om.jpeg" alt="Generic placeholder image" width="50px" style="position:relative; bottom: 3px;">
                   <div class="media-body">
-                    <h5 class="card-title">Deep Learning -> Federated Learning in 10 Lines of PyTorch + PySyft</h5>
+                    <h5 class="card-title">Deep Learning & Federated Learning in 10 Lines of PyTorch + PySyft</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">by Théo Ryffel on March 1st, 2019 </h6>
                       <p>
-                        <span class="badge badge-secondary">Deep Learning</span>
-                        <span class="badge badge-secondary">Federated Learning</span>
-                        <span class="badge badge-secondary">PyTorch</span>
+                        <span class="badge badge-info">Deep Learning</span>
+                        <span class="badge badge-info">Federated Learning</span>
+                        <span class="badge badge-info">PyTorch</span>
                     </p>
-                      <h6 class="card-subtitle mb-2 text-muted">Posted on March 1st, 2019 </h6>
                   </div>
                 </div>
 
-              <p class="card-text"><br /><b>We show how to do Federated Learning with PySyft in a very easy way by training a
-                  Convolutional Neural Network over the MNIST Dataset.</b>
+              <p class="card-text">
+                  We show how to do Federated Learning with PySyft in a very easy way by training a
+                  Convolutional Neural Network over a distributed version of the MNIST Dataset.</b>
 
-                  <h5>So, why Federated Learning?</h5>
+                  <h5>Federated Learning</h5>
 
                 Federated Learning is a very exciting and upsurging Machine Learning technique for learning on decentralized data.
                 The core idea is that a training dataset can remain in the hands of its producers (also known as _workers_)
                 which helps improve privacy and ownership, while the model is shared between workers. One popular application
-                of Federated Learning is for learning the
-                ["next word prediction" model on your mobile phone](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html)
+                of Federated Learning is for learning the "next word prediction" model on your mobile phone
                 when you write SMS messages: you don't want the data used for training that predictor — i.e. your text
-                messages — to be sent to a central server. (...)
+                messages — to be sent to a central server. (Read more.)
                 </p>
-                <p class="">
-                  <a href="https://blog.openmined.org/upgrade-to-federated-learning-in-10-lines/" class="btn btn-primary">Read more on blog.openmined.org</a>
-              </p>
-
             </div>
           </div>
         </div>
+        </a>
+
+
+
         <div class="card" style="margin-bottom: 10px;">
           <div class="card-body">
-              You can also &nbsp;
-            <a href="https://www.airbnb.fr/rooms/24906822" class="card-link">Book my apartement</a>
-              <a href="https://www.instagram.com/joselyne.ernst/" class="card-link">Discover my Instagram</a>
-              <a href="http://lebonsillon.fr/" class="card-link">Buy vinyls</a>
+                <a href="https://www.di.ens.fr/~ryffel/" class="card-link">About</a>
+                  <a href="https://twitter.com/theoryffel" class="card-link">Twitter</a>
+                  <a href="https://github.com/LaRiffle" class="card-link">Github</a>
+                  <a href="https://www.linkedin.com/in/theo-ryffel/" class="card-link">Linkedin</a>
+                  <a href="https://scholar.google.fr/citations?user=JbSRqs8AAAAJ&hl=fr&oi=ao" class="card-link">Google scholar</a>
+                  <a tabindex="0" class="card-link" role="button" data-toggle="popover" data-trigger="focus" data-content="theo.ryffel[at]ens.fr">Contact</a>
+
           </div>
         </div>
 
