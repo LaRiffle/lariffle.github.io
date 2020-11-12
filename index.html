@@ -112,32 +112,84 @@
           </div>
         </div>
         <hr />
-        <a href="https://blog.openmined.org/encrypted-training-on-mnist/" class="blog-link">
+        <a href="https://blog.openmined.org/pysyft-opacus-federated-learning-with-differential-privacy/" class="blog-link">
         <div class="card-deck" style="margin-bottom: 10px;">
           <div class="card">
             <div class="card-body">
                 <div class="media">
                   <img class="mr-3" src="home_src/logos/om.jpeg" alt="Generic placeholder image" width="50px" style="position:relative; bottom: 3px;">
                   <div class="media-body">
-                    <h5 class="card-title">ENCRYPTED TRAINING WITH PYTORCH + PYSYFT</h5>
-                      <h6 class="card-subtitle mb-2 text-muted">by Théo Ryffel on August 5th, 2019 </h6>
+                    <h5 class="card-title">Pysyft + Opacus: Federated Learning with Differential Privacy</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">by Théo Ryffel on September 30th, 2020</h6>
                     <p>
                         <span class="badge badge-info">Deep Learning</span>
-                        <span class="badge badge-info">Private AI</span>
-                        <span class="badge badge-info">Secure Multi-Party Computation</span>
-                        <span class="badge badge-info">Encrypted Computation</span>
+                        <span class="badge badge-info">Federated Learning</span>
+                        <span class="badge badge-info">Differential Privacy</span>
                     </p>
 
                   </div>
                 </div>
 
-              <p class="card-text">We use the PySyft library to encrypt a neural
-                  network and privately classify MNIST images using Secure Multi-Party Computation (SMPC).
-                  We achieve classification in <33ms with >98% accuracy over local (virtualized) computation.</p>
+              <p class="card-text">We present here a very simple example of combining Federated Learning (FL) with Differential Privacy (DP), which can be
+              an interesting baseline to experiment with these great technologies. More specifically, we show how the DP Opacus
+              library released by PyTorch can be used in PySyft FL workflows with very little overhead.</p>
                 
             </div>
           </div>
         </div>
+        </a>
+        <a href="https://blog.openmined.org/encrypted-inference-resnet18/" class="blog-link">
+          <div class="card-deck" style="margin-bottom: 10px;">
+            <div class="card">
+              <div class="card-body">
+                <div class="media">
+                  <img class="mr-3" src="home_src/logos/om.jpeg" alt="Generic placeholder image" width="50px"
+                    style="position:relative; bottom: 3px;">
+                  <div class="media-body">
+                    <h5 class="card-title">Encrypted inference with Resnet-18 using Pytorch + Pysyft on ants & bees images</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">by Théo Ryffel on September 15th, 2020</h6>
+                    <p>
+                      <span class="badge badge-info">Function Secret Sharing</span>
+                      <span class="badge badge-info">Secure Multi-Party Computation</span>
+                      <span class="badge badge-info">Encrypted Computation</span>
+                      <span class="badge badge-info">Deep Learning</span>
+                    </p>
+        
+                  </div>
+                </div>
+        
+                <p class="card-text">We label encrypted images with an encrypted ResNet-18 using PySyft and Function Secret Sharing.</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://blog.openmined.org/encrypted-training-on-mnist/" class="blog-link">
+          <div class="card-deck" style="margin-bottom: 10px;">
+            <div class="card">
+              <div class="card-body">
+                <div class="media">
+                  <img class="mr-3" src="home_src/logos/om.jpeg" alt="Generic placeholder image" width="50px"
+                    style="position:relative; bottom: 3px;">
+                  <div class="media-body">
+                    <h5 class="card-title">Encrypted training with Pytorch + Pysyft</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">by Théo Ryffel on August 5th, 2019 </h6>
+                    <p>
+                      <span class="badge badge-info">Deep Learning</span>
+                      <span class="badge badge-info">Private AI</span>
+                      <span class="badge badge-info">Secure Multi-Party Computation</span>
+                      <span class="badge badge-info">Encrypted Computation</span>
+                    </p>
+        
+                  </div>
+                </div>
+        
+                <p class="card-text">We use the PySyft library to encrypt a neural
+                  network and privately classify MNIST images using Secure Multi-Party Computation (SMPC).
+                  We achieve classification in <33ms with>98% accuracy over local (virtualized) computation.</p>
+        
+              </div>
+            </div>
+          </div>
         </a>
         <hr />
         <a href="https://blog.openmined.org/encrypted-deep-learning-classification-with-pysyft/" class="blog-link">
@@ -162,7 +214,6 @@
               <p class="card-text">We use the PySyft library to train a PyTorch neural
                   network on MNIST using Secure Multi-Party Computation (SMPC).
                   We combine PyTorch nets, SMPC & Autograd in a single demo.</p>
-                <img src="https://blog.openmined.org/content/images/2019/04/mpc7.gif" alt="" width="60%" />
             </div>
           </div>
         </div>
